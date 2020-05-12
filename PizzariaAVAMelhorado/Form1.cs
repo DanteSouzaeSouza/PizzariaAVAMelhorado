@@ -121,13 +121,18 @@ namespace PizzariaAVAMelhorado
 
         private void cboSabor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int selectedVal = Convert.ToInt32(cboSabor.SelectedIndex.ToString());
+            // Captando o valor selecionado do ComboBox
+            int selectedVal = cboSabor.SelectedIndex;
             
+            // checando se o valor selecionado é o do item Doce
             if (selectedVal == 4)
             {
+                // desativa o groupBox que tem os adicionais
                 grpAdicionais.Enabled = false;
-            } else
+            }
+            else
             {
+                // ativa o groupBox dos adicionais
                 grpAdicionais.Enabled = true;
             }
         }
